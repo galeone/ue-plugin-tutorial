@@ -2,9 +2,20 @@
 
 #include "HAL/Platform.h"
 
+#if PLATFORM_WINDOWS
+#include "Windows/AllowWindowsPlatformTypes.h"
+#include "Windows/WindowsHWrapper.h"
+#endif
+
 THIRD_PARTY_INCLUDES_START
 #include "lib.h"
 THIRD_PARTY_INCLUDES_END
+
+#if PLATFORM_WINDOWS
+#include "Windows/HideWindowsPlatformTypes.h"
+#endif
+
+#include "Modules/ModuleManager.h"
 
 #include <string>
 
